@@ -36,9 +36,9 @@ fun main() {
         val dist = value.minus(list2.get(index)).absoluteValue
         sum += dist
     })
-    println("part1" + sum)
+    println("part1: $sum")
 
     val countedList = list2.groupingBy { it }.eachCount()
     val solutionPart2 = list1.map { countedList.getOrDefault(it, 0) * it }.sum()
-    println("part2$solutionPart2")
+    println("part2: $solutionPart2")
 }
